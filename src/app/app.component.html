@@ -1,46 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-<!-- <h1>My Store</h1> -->
-  <a class="navbar-brand" href="#">My Store</a>
-  <img src="assets/cart.png" width="50" height="50" class="d-inline-block align-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav" >
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link" href="#">Product</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">checkout</a>
-      </li>
-       <li class="nav-item">
-        <button type="button" class="btn btn-warning">Add to cart</button>
-      </li> 
-    </ul>
-  </div>
-</nav>
+<app-header></app-header>
 <div class="container wrapper"  >
-<input class="form-control form-control-lg" type="text" placeholder="search">
+<app-search></app-search>
 <div class="row box">
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-      <img src="assets/watch.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Fossil $50</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Buy</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-4">
+  <app-product class="col-4"></app-product>
+  <app-product class="col-4"></app-product>
+  <app-product class="col-4"></app-product>
+  <app-product class="col-4"></app-product>
+
+  <!-- <div class="col-4">
     <div class="card" style="width: 18rem;">
       <img src="assets/bag.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Fasttrack $75</h5>
+        <h5 class="card-title">Fast track $75</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <a href="#" class="btn btn-primary">Buy</a>
       </div>
@@ -86,9 +57,9 @@
       </div>
     </div>
   </div>
+</div> -->
 </div>
 </div>
 <div class="card">
-  <div class="card-header footer">
-    &copy; copyright
-  </div>
+  <app-footer></app-footer>
+</div>
