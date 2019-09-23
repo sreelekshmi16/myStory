@@ -1,6 +1,7 @@
 .wrapper{
     padding-top: 4%;
     margin-top: 60px;
+    min-height: calc(100vh - 150px);
 }
 .box{
     margin-top: 2%;

@@ -1,11 +1,16 @@
 <app-header></app-header>
 <div class="container wrapper"  >
-<app-search></app-search>
+  <!-- <app-product-list></app-product-list> -->
+  <router-outlet></router-outlet>
+<!-- <app-search></app-search>
 <div class="row box">
-  <app-product class="col-4"></app-product>
-  <app-product class="col-4"></app-product>
-  <app-product class="col-4"></app-product>
-  <app-product class="col-4"></app-product>
+  <app-product *ngFor="let item of products"  [product]="item" class="col-4"></app-product> -->
+  <!-- [product]="products[0]" changes to loop *ngFor -->
+  <!-- [product]="productFeature changes to array-->
+  <!-- [property=propertyFeature]="productFeature" gives error so use @input in product component.ts  -->
+  <!-- <app-product [product]="productFeature" class="col-4"></app-product> -->
+  <!-- <app-product [product]="products[1]" class="col-4"></app-product>
+  <app-product [product]="products[2]" class="col-4"></app-product> -->
 
   <!-- <div class="col-4">
     <div class="card" style="width: 18rem;">
@@ -59,7 +64,7 @@
   </div>
 </div> -->
 </div>
-</div>
 <div class="card">
   <app-footer></app-footer>
+  <p>{{products}}</p>
 </div>

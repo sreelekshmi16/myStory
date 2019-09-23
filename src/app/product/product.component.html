@@ -1,10 +1,20 @@
 <!-- <div class="col-4"> -->
     <div class="card" >
-      <img src="assets/watch.png" class="card-img-top" alt="...">
+      <img [src]="product.imageUrl" class="card-img-top" alt="...">
+      <!-- property binding -->
       <div class="card-body">
-        <h5 class="card-title">Fossil $50</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Buy</a>
+        <h5 class="card-title">{{product.title |uppercase}}</h5>
+        <!-- |pipes in angular -->
+        <p class="card-text">{{product.description}}</p>
+        <!-- productFeature.imgTitle changes to product.imgTitle since it is stored[] -->
+        <!-- string interpolation -->
+        <a href="#" *ngIf="product.isAvailable; else elseBlock"class="btn btn-primary" (click)="addToCart()">Add to cart</a>
+        <ng-template #elseBlock><button type="button" class="btn btn-warning">Sold Out</button></ng-template>
+        <a class="btn btn-primary" (click)="goToDetails(product.id)">Product details</a>
+        <!-- <div *ngIf="condition; else elseBlock">Content to render when condition is true.</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template> -->
+        <!--*ngIf="product.isAvailable" condition checked and button appeared  -->
+        <!-- click event invoked --> 
       </div>
     </div>
   <!-- </div> -->
